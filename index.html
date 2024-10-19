@@ -9,9 +9,18 @@
 </head>
     
 <body class="not-loaded">
-    <audio autoplay loop>
+    <audio id="bgMusic" loop>
       <source src="that_girl.mp3" type="audio/mpeg">
     </audio>
+      <script>
+      // Wait for user interaction to start the audio
+      document.body.addEventListener('click', function() {
+          const audio = document.getElementById('bgMusic');
+          if (audio.paused) {
+              audio.play();
+          }
+      }, { once: true }); // Ensures this only happens once
+  </script>
     <div class="night"></div>
     <div class="happy-woman-day">𝓗𝓪𝓹𝓹𝔂 𝔀𝓸𝓶𝓮𝓷'𝓼 𝓭𝓪𝔂 2️⃣0️⃣/1️⃣0️⃣</div>
     <div class="flowers">
